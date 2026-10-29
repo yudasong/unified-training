@@ -1,0 +1,99 @@
+diff --git a/lm_eval/evaluator.py b/lm_eval/evaluator.py
+index d22cf6a5..2021fc37 100644
+--- a/lm_eval/evaluator.py
++++ b/lm_eval/evaluator.py
+@@ -372,7 +372,8 @@ def simple_evaluate(
+             "model_args": model_args,
+         }
+         # add more detailed model info if available
+-        if isinstance(lm, lm_eval.models.huggingface.HFLM):
++        huggingface_model = getattr(lm_eval.models, "huggingface", None)
++        if huggingface_model is not None and isinstance(lm, huggingface_model.HFLM):
+             results["config"].update(lm.get_model_info())
+         # add info about execution
+         results["config"].update(
+diff --git a/lm_eval/models/vllm_causallms.py b/lm_eval/models/vllm_causallms.py
+index 474f9bbe..ac4f95c1 100644
+--- a/lm_eval/models/vllm_causallms.py
++++ b/lm_eval/models/vllm_causallms.py
+@@ -31,13 +31,26 @@ from lm_eval.utils import (
+ 
+ try:
+     import ray
+-    from vllm import LLM, SamplingParams
++    from vllm import LLM, SamplingParams, TokensPrompt
+     from vllm.lora.request import LoRARequest
+-    from vllm.transformers_utils.tokenizer import get_tokenizer
+-    from vllm.utils import get_open_port
++
++    try:
++        from vllm.tokenizers import get_tokenizer
++    except ModuleNotFoundError:
++        from vllm.transformers_utils.tokenizer import get_tokenizer
++
++    try:
++        from vllm.utils.network_utils import get_open_port
++    except ImportError:
++        from vllm.utils import get_open_port
+ 
+     if parse_version(version("vllm")) >= parse_version("0.8.3"):
+-        from vllm.entrypoints.chat_utils import resolve_hf_chat_template
++        try:
++            from vllm.renderers.hf import (
++                resolve_chat_template as resolve_hf_chat_template,
++            )
++        except ImportError:
++            from vllm.entrypoints.chat_utils import resolve_hf_chat_template
+ except ModuleNotFoundError:
+     pass
+ 
+@@ -77,7 +90,7 @@ def _vllm_mp_worker(
+     try:
+         llm = LLM(**model_args)
+         res = llm.generate(
+-            prompt_token_ids=requests,
++            prompts=[TokensPrompt(prompt_token_ids=request) for request in requests],
+             sampling_params=sampling_params,
+             lora_request=lora_request,
+         )
+@@ -162,10 +175,8 @@ class VLLM(TemplateLM):
+             "tensor_parallel_size": int(tensor_parallel_size),
+             "max_model_len": int(self._max_length) if self._max_length else None,
+             "max_num_seqs": kwargs.get("max_num_seqs", max_batch_size),
+-            "swap_space": int(swap_space),
+             "quantization": quantization,
+             "seed": int(seed),
+-            "device": str(device),
+         }
+         self.model_args.update(kwargs)
+         self.batch_size = (
+@@ -234,7 +245,10 @@ class VLLM(TemplateLM):
+                 in inspect.signature(resolve_hf_chat_template).parameters
+             ):
+                 kwargs_resolve_hf_chat_template["trsut_remote_code"] = trust_remote_code
+-            else:
++            elif (
++                "trust_remote_code"
++                in inspect.signature(resolve_hf_chat_template).parameters
++            ):
+                 kwargs_resolve_hf_chat_template["trust_remote_code"] = trust_remote_code
+ 
+             self.hf_chat_template = resolve_hf_chat_template(
+@@ -368,7 +382,7 @@ class VLLM(TemplateLM):
+             ):
+                 llm = LLM(**model_args)
+                 return llm.generate(
+-                    prompt_token_ids=requests,
++                    prompts=[TokensPrompt(prompt_token_ids=request) for request in requests],
+                     sampling_params=sampling_params,
+                     lora_request=lora_request,
+                 )
+@@ -457,7 +471,7 @@ class VLLM(TemplateLM):
+ 
+         else:
+             outputs = self.model.generate(
+-                prompt_token_ids=requests,
++                prompts=[TokensPrompt(prompt_token_ids=request) for request in requests],
+                 sampling_params=sampling_params,
+                 use_tqdm=True if self.batch_size == "auto" else False,
+                 lora_request=self.lora_request,

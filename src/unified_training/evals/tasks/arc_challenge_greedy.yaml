@@ -1,0 +1,29 @@
+task: arc_challenge_greedy
+dataset_path: allenai/ai2_arc
+dataset_name: ARC-Challenge
+dataset_kwargs:
+  revision: 210d026faf9955653af8916fad021475a3f00453
+output_type: generate_until
+process_docs: !function mcq_greedy_utils.process_arc_docs
+test_split: test
+doc_to_text: !function mcq_greedy_utils.doc_to_greedy_mcq
+doc_to_target: !function mcq_greedy_utils.doc_to_mcq_target
+process_results: !function mcq_greedy_utils.process_greedy_mcq_results
+num_fewshot: 0
+repeats: 1
+filter_list:
+  - name: greedy
+    filter:
+      - function: take_first
+generation_kwargs:
+  do_sample: false
+  temperature: 0.0
+  max_gen_toks: 8
+  until:
+    - <|im_end|>
+metric_list:
+  - {metric: greedy_accuracy, aggregation: mean, higher_is_better: true}
+  - {metric: format_valid_rate, aggregation: mean, higher_is_better: true}
+metadata:
+  version: 1.0
+  protocol: deterministic_choice_visible_greedy_v2

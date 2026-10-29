@@ -1,0 +1,2 @@
+This distribution includes open source which is archived at the following URL: https://opensource.nvidia.com/oss/teams/nvidia/nemo-rl/v0.6.0:linux-amd64/index.html
+For further inquiries or assistance, contact us at oss-requests@nvidia.com

@@ -1,0 +1,8 @@
+# Benchmark harness (unified_training.evals), pinned to the paper's evaluation runtime (Python 3.13). Install in a
+# separate environment, then the repo with --no-deps and the lm-eval patch (README, Install).
+lm-eval==0.4.9
+evalplus @ git+https://github.com/evalplus/evalplus@26d6d00bb1fd0fa37f39c99d5290da67891d1c5e
+math-verify==0.8.0
+vllm==0.17.1
+datasets==4.0.0
+transformers==4.57.6

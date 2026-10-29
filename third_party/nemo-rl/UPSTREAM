@@ -1,0 +1,26 @@
+Upstream:  https://github.com/NVIDIA-NeMo/RL.git
+Commit:    fbbbbd5489c55b6ffbfb90ad23d6385cf918d163   (pip version 0.6.0+fbbbbd54; image nvcr.io/nvidia/nemo-rl:v0.6.0)
+Licence:   Apache-2.0 (LICENSE, NOTICES.txt; NVIDIA copyright retained)
+
+nemo_rl.patch = our changes to nemo_rl/ and examples/ (22 files), used by the paper's NeMo-RL runs (MaxRL on
+Math12K from the base model, coding RL on KodCode):
+  - MaxRL advantage estimator (grpo.adv_estimator.name=maxrl: A = (r - mean) / (mean + eps), baseline
+    subtraction, optional ceiling / eps smoothing) next to upstream GRPO
+  - math environment: verl boxed-answer reward (verl_math_reward), strict-form verifiers, and the sandboxed
+    unit-test reward for coding (math_verify_impl=code_tests -> unified_training code reward)
+  - async/checkpoint/dataloader hardening, system-interpreter actors (NEMO_RL_PY_EXECUTABLES_SYSTEM=1),
+    logger options (log_data_jsonl, step_mult)
+nemo_rl/data/ is NOT patched: the runs used upstream's nemo_rl/data unchanged.
+
+Runtime of the paper's runs: one Python 3.13 venv with torch 2.10.0, vllm 0.17.1, transformers 4.57.6,
+ray 2.57.0, accelerate 1.14.0, datasets 4.0.0, hydra-core 1.3.5, omegaconf 2.3.1, math-verify 0.8.0,
+DTensor (FSDP) policy backend, sequence packing off.
+requirements-nemo-rl.txt pins this runtime; scripts/setup_nemo_rl_env.sh builds it and runs setup.sh.
+
+Verification (2026-10-27): applying the unscrubbed patch to a clean checkout of the commit above reproduces
+the code the runs executed byte for byte (nemo_rl/, examples/; nemo_rl/data identical to upstream). The
+shipped patch differs from that only in comments, one error-message string, two entries of an
+environment-variable denylist (internal names removed) and three imports renamed to this repository's
+package (unified_training.code_reward / checkpoint_milestones / strict_math_gate; the first two are
+byte-identical to the modules the runs imported, the third is only reached by math_verify_impl=
+hf_math_verify_strict, which no paper run used). Needs src/ of this repository on PYTHONPATH.

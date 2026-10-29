@@ -1,0 +1,195 @@
+{
+  "components": {
+    "code-meta-reasoning": {
+      "bytes": 10196464,
+      "n_files": 1
+    },
+    "common_crawl-high-quality": {
+      "bytes": 3329690,
+      "n_files": 1
+    },
+    "cranecode": {
+      "bytes": 35820675,
+      "n_files": 1
+    },
+    "cranemath": {
+      "bytes": 59894284,
+      "n_files": 1
+    },
+    "dolmino-math": {
+      "bytes": 3181727,
+      "n_files": 1
+    },
+    "dolmino_1-flan": {
+      "bytes": 39651411,
+      "n_files": 1
+    },
+    "gemini-reasoning-traces": {
+      "bytes": 40964117,
+      "n_files": 1
+    },
+    "general_reasoning_mix": {
+      "bytes": 41655282,
+      "n_files": 1
+    },
+    "llama_nemotron-reasoning-traces": {
+      "bytes": 3548125,
+      "n_files": 4
+    },
+    "math-meta-reasoning": {
+      "bytes": 10914925,
+      "n_files": 1
+    },
+    "megamatt": {
+      "bytes": 36146932,
+      "n_files": 1
+    },
+    "nemotron-synth-qa": {
+      "bytes": 9075337,
+      "n_files": 1
+    },
+    "olmocr_science_pdfs": {
+      "bytes": 3484277,
+      "n_files": 2
+    },
+    "omr-rewrite-fullthoughts": {
+      "bytes": 162876630,
+      "n_files": 1
+    },
+    "openthoughts2-reasoning-traces": {
+      "bytes": 10646236,
+      "n_files": 1
+    },
+    "program_verifiable": {
+      "bytes": 3942499,
+      "n_files": 1
+    },
+    "qwq-reasoning-traces": {
+      "bytes": 18715773,
+      "n_files": 1
+    },
+    "reddit_to_flashcards": {
+      "bytes": 3362687,
+      "n_files": 1
+    },
+    "stack_edu-fim": {
+      "bytes": 23710149,
+      "n_files": 1
+    },
+    "stem-heavy-crawl": {
+      "bytes": 3985509,
+      "n_files": 1
+    },
+    "tinymath-mind": {
+      "bytes": 4433659,
+      "n_files": 1
+    },
+    "tinymath-pot": {
+      "bytes": 21933537,
+      "n_files": 1
+    },
+    "tulu-3-sft": {
+      "bytes": 17115570,
+      "n_files": 1
+    },
+    "wiki_to_rcqa": {
+      "bytes": 2839370,
+      "n_files": 13
+    }
+  },
+  "excluded_manifest": "<local path>",
+  "files": {
+    "code-meta-reasoning": [
+      "data/code-meta-reasoning/mid-train-test_part_047.jsonl.zst"
+    ],
+    "common_crawl-high-quality": [
+      "data/common_crawl-high-quality_20_software_development/shard_00000236.jsonl.zst"
+    ],
+    "cranecode": [
+      "data/cranecode/shard_00000481.jsonl.zst"
+    ],
+    "cranemath": [
+      "data/cranemath/shard_00000186-withid.jsonl.zst"
+    ],
+    "dolmino-math": [
+      "data/dolmino-math/dolmino_math_tinyGSM-MIND_problem-solving_tiny_gsm_inline_part099.000000.jsonl.zst"
+    ],
+    "dolmino_1-flan": [
+      "data/dolmino_1-flan/tulu_flan-0200.jsonl.zst"
+    ],
+    "gemini-reasoning-traces": [
+      "data/gemini-reasoning-traces/train-00002-of-00004.jsonl.zst"
+    ],
+    "general_reasoning_mix": [
+      "data/general_reasoning_mix/train-00046-of-00049.jsonl.zst"
+    ],
+    "llama_nemotron-reasoning-traces": [
+      "data/llama_nemotron-reasoning-traces/train-00245-of-00278.jsonl.zst",
+      "data/llama_nemotron-reasoning-traces/train-00244-of-00278.jsonl.zst",
+      "data/llama_nemotron-reasoning-traces/train-00243-of-00278.jsonl.zst",
+      "data/llama_nemotron-reasoning-traces/train-00242-of-00278.jsonl.zst"
+    ],
+    "math-meta-reasoning": [
+      "data/math-meta-reasoning/mid-train-test_part_034.jsonl.zst"
+    ],
+    "megamatt": [
+      "data/megamatt/shard_00001909.jsonl.zst"
+    ],
+    "nemotron-synth-qa": [
+      "data/nemotron-synth-qa/CC-MAIN-2024-30-part-00040.jsonl.zst"
+    ],
+    "olmocr_science_pdfs": [
+      "data/olmocr_science_pdfs-high_quality-software_development-2e13/software_dev_p040_shard_00003166.jsonl.zst",
+      "data/olmocr_science_pdfs-high_quality-software_development-2e13/software_dev_p040_shard_00003165.jsonl.zst"
+    ],
+    "omr-rewrite-fullthoughts": [
+      "data/omr-rewrite-fullthoughts/cot-00019-of-00021.jsonl.zst"
+    ],
+    "openthoughts2-reasoning-traces": [
+      "data/openthoughts2-reasoning-traces/train-00104-of-00110.jsonl.zst"
+    ],
+    "program_verifiable": [
+      "data/program_verifiable/o4mini-mid-train-test_part_002.jsonl.zst"
+    ],
+    "qwq-reasoning-traces": [
+      "data/qwq-reasoning-traces/train-00083-of-00088.jsonl.zst"
+    ],
+    "reddit_to_flashcards": [
+      "data/reddit_to_flashcards/merged_qa_prefilter_densesubs_lowthresh-0195_f4.jsonl.zst"
+    ],
+    "stack_edu-fim": [
+      "data/stack_edu-fim_vigintile_19_SQL/shard_00000000.jsonl.zst"
+    ],
+    "stem-heavy-crawl": [
+      "data/stem-heavy-crawl/software_development.00000540.jsonl.zst"
+    ],
+    "tinymath-mind": [
+      "data/tinymath-mind/output_188.jsonl.zst"
+    ],
+    "tinymath-pot": [
+      "data/tinymath-pot/output_08.jsonl.zst"
+    ],
+    "tulu-3-sft": [
+      "data/tulu-3-sft/tulu-3-midtrain-v0-data-simple-concat-with-double-new-line-with-generation-prompt_part_071.jsonl.zst"
+    ],
+    "wiki_to_rcqa": [
+      "data/wiki_to_rcqa-part3/00060_f350.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f35.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f348.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f346.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f344.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f343.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f342.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f341.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f34.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f339.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f338.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f337.jsonl.zst",
+      "data/wiki_to_rcqa-part3/00060_f336.jsonl.zst"
+    ]
+  },
+  "repo_id": "allenai/dolma3_dolmino_mix-100B-1025",
+  "revision": "f23942ae8a8114af6e992efe8188ce8c531acd16",
+  "selection": "tail continuation past the fresh-anchor staging (files it took are skipped)",
+  "tokens_per_component": 150000
+}

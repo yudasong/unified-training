@@ -1,0 +1,809 @@
+{
+ "source": "data/nltw_m/corpus_tw1X/cot.jsonl rows 0-5 (tw1X, 09-26) and their questions from data/<spec>/corpus_tw1X/pool.jsonl",
+ "items": [
+  {
+   "corpus_row": 0,
+   "spec": "nltw_m0",
+   "pool_row": {
+    "qid": "a916c2451850cde3",
+    "prompt": "Ava, Ella, Zoe, Nora, Owen, Mia, Iris, Liam and Ethan live on different floors of the same tower. The occupied floors are {8, 15, 21, 27, 29, 36, 37, 38, 40}. Best friends: Ava's best friend is Iris, Ella's best friend is Mia, Zoe's best friend is Ella, Nora's best friend is Ava, Owen's best friend is Ethan, Mia's best friend is Owen, Iris's best friend is Zoe, Liam's best friend is Nora, Ethan's best friend is Liam. Here is what is known:\n - The floor numbers of the best friend of the person on floor 8 and Ava add up to 55.\n - The floor numbers of Ethan and the person directly below Nora add up to 75.\n - Mia lives on a higher floor than Liam.\n - The person on the highest floor lives 4 floors above Iris.\n - Owen lives on an odd floor.\n - The floor numbers of Liam and Mia add up to 37.\n - The floor numbers of the best friend of the person on floor 36 and Iris add up to 74.\n - The person directly above Mia lives 21 floors above Ava.\n - The floor numbers of Mia's best friend and Ethan add up to 58.\nWork out which floor each person lives on. Answer with a comma-separated list like \"Ava=NUMBER, ...\" covering everyone.\n\nAnswer: ",
+    "question": "Ava, Ella, Zoe, Nora, Owen, Mia, Iris, Liam and Ethan live on different floors of the same tower. The occupied floors are {8, 15, 21, 27, 29, 36, 37, 38, 40}. Best friends: Ava's best friend is Iris, Ella's best friend is Mia, Zoe's best friend is Ella, Nora's best friend is Ava, Owen's best friend is Ethan, Mia's best friend is Owen, Iris's best friend is Zoe, Liam's best friend is Nora, Ethan's best friend is Liam. Here is what is known:\n - The floor numbers of the best friend of the person on floor 8 and Ava add up to 55.\n - The floor numbers of Ethan and the person directly below Nora add up to 75.\n - Mia lives on a higher floor than Liam.\n - The person on the highest floor lives 4 floors above Iris.\n - Owen lives on an odd floor.\n - The floor numbers of Liam and Mia add up to 37.\n - The floor numbers of the best friend of the person on floor 36 and Iris add up to 74.\n - The person directly above Mia lives 21 floors above Ava.\n - The floor numbers of Mia's best friend and Ethan add up to 58.\nWork out which floor each person lives on. Answer with a comma-separated list like \"Ava=NUMBER, ...\" covering everyone.",
+    "answer": "Ava=15, Ella=27, Zoe=38, Nora=40, Owen=21, Mia=29, Iris=36, Liam=8, Ethan=37",
+    "metadata": {
+     "source_dataset": "nl_tower",
+     "source_index": 27854,
+     "names": [
+      "Ava",
+      "Ella",
+      "Zoe",
+      "Nora",
+      "Owen",
+      "Mia",
+      "Iris",
+      "Liam",
+      "Ethan"
+     ],
+     "domain": [
+      8,
+      15,
+      21,
+      27,
+      29,
+      36,
+      37,
+      38,
+      40
+     ],
+     "friends": [
+      6,
+      5,
+      1,
+      0,
+      8,
+      4,
+      2,
+      3,
+      7
+     ],
+     "solution": [
+      15,
+      27,
+      38,
+      40,
+      21,
+      29,
+      36,
+      8,
+      37
+     ],
+     "clues": [
+      [
+       "sum",
+       [
+        "friend",
+        [
+         "occ",
+         8
+        ]
+       ],
+       [
+        "n",
+        0
+       ],
+       55
+      ],
+      [
+       "sum",
+       [
+        "n",
+        8
+       ],
+       [
+        "below",
+        [
+         "n",
+         3
+        ]
+       ],
+       75
+      ],
+      [
+       "gt",
+       [
+        "n",
+        5
+       ],
+       [
+        "n",
+        7
+       ],
+       null
+      ],
+      [
+       "diff",
+       [
+        "rank",
+        8
+       ],
+       [
+        "n",
+        6
+       ],
+       4
+      ],
+      [
+       "parity",
+       [
+        "n",
+        4
+       ],
+       null,
+       1
+      ],
+      [
+       "sum",
+       [
+        "n",
+        7
+       ],
+       [
+        "n",
+        5
+       ],
+       37
+      ],
+      [
+       "sum",
+       [
+        "friend",
+        [
+         "occ",
+         36
+        ]
+       ],
+       [
+        "n",
+        6
+       ],
+       74
+      ],
+      [
+       "diff",
+       [
+        "above",
+        [
+         "n",
+         5
+        ]
+       ],
+       [
+        "n",
+        0
+       ],
+       21
+      ],
+      [
+       "sum",
+       [
+        "friend",
+        [
+         "n",
+         5
+        ]
+       ],
+       [
+        "n",
+        8
+       ],
+       58
+      ]
+     ],
+     "statements": [
+      "The floor numbers of the best friend of the person on floor 8 and Ava add up to 55.",
+      "The floor numbers of Ethan and the person directly below Nora add up to 75.",
+      "Mia lives on a higher floor than Liam.",
+      "The person on the highest floor lives 4 floors above Iris.",
+      "Owen lives on an odd floor.",
+      "The floor numbers of Liam and Mia add up to 37.",
+      "The floor numbers of the best friend of the person on floor 36 and Iris add up to 74.",
+      "The person directly above Mia lives 21 floors above Ava.",
+      "The floor numbers of Mia's best friend and Ethan add up to 58."
+     ],
+     "patterns": [
+      "dfriend_occ",
+      "order",
+      "direct",
+      "rankn",
+      "direct",
+      "direct",
+      "dfriend_occ",
+      "order",
+      "friend"
+     ],
+     "n_deferred": 2,
+     "n_held": 0,
+     "residual_no_held": 1,
+     "n_necessary": 9,
+     "max_depth": 2,
+     "residual_no_deferred": 2,
+     "oracle": {
+      "rounds": 2,
+      "n_lines": 26,
+      "defer_fixes_before": [
+       3,
+       5
+      ],
+      "chain": 2,
+      "unapplied": []
+     }
+    }
+   },
+   "target_sha256": "75eda128fb9380a5646bf069772f36e33820b02d7776bf92318c53f24aa64ae9"
+  },
+  {
+   "corpus_row": 1,
+   "spec": "nltw_m0",
+   "pool_row": {
+    "qid": "3a5358fe850efaf9",
+    "prompt": "Mia, Ella, Hugo, Ruby, Jasper, Ethan, Felix and Nora live on different floors of the same tower. The occupied floors are {7, 10, 11, 18, 21, 31, 33, 39}. Best friends: Mia's best friend is Jasper, Ella's best friend is Mia, Hugo's best friend is Ruby, Ruby's best friend is Ella, Jasper's best friend is Felix, Ethan's best friend is Nora, Felix's best friend is Ethan, Nora's best friend is Hugo. Here is what is known:\n - Hugo lives on an odd floor.\n - The floor numbers of the best friend of the person on floor 10 and Felix add up to 21.\n - The floor numbers of Jasper's best friend and Jasper add up to 41.\n - Ella lives on an even floor.\n - Hugo lives 28 floors above the person directly below Ella.\n - The person directly below Hugo lives 2 floors above Jasper.\n - The floor numbers of Ruby's best friend and Ruby add up to 51.\n - The floor numbers of Mia and Ruby add up to 54.\nWork out which floor each person lives on. Answer with a comma-separated list like \"Mia=NUMBER, ...\" covering everyone.\n\nAnswer: ",
+    "question": "Mia, Ella, Hugo, Ruby, Jasper, Ethan, Felix and Nora live on different floors of the same tower. The occupied floors are {7, 10, 11, 18, 21, 31, 33, 39}. Best friends: Mia's best friend is Jasper, Ella's best friend is Mia, Hugo's best friend is Ruby, Ruby's best friend is Ella, Jasper's best friend is Felix, Ethan's best friend is Nora, Felix's best friend is Ethan, Nora's best friend is Hugo. Here is what is known:\n - Hugo lives on an odd floor.\n - The floor numbers of the best friend of the person on floor 10 and Felix add up to 21.\n - The floor numbers of Jasper's best friend and Jasper add up to 41.\n - Ella lives on an even floor.\n - Hugo lives 28 floors above the person directly below Ella.\n - The person directly below Hugo lives 2 floors above Jasper.\n - The floor numbers of Ruby's best friend and Ruby add up to 51.\n - The floor numbers of Mia and Ruby add up to 54.\nWork out which floor each person lives on. Answer with a comma-separated list like \"Mia=NUMBER, ...\" covering everyone.",
+    "answer": "Mia=21, Ella=18, Hugo=39, Ruby=33, Jasper=31, Ethan=11, Felix=10, Nora=7",
+    "metadata": {
+     "source_dataset": "nl_tower",
+     "source_index": 26638,
+     "names": [
+      "Mia",
+      "Ella",
+      "Hugo",
+      "Ruby",
+      "Jasper",
+      "Ethan",
+      "Felix",
+      "Nora"
+     ],
+     "domain": [
+      7,
+      10,
+      11,
+      18,
+      21,
+      31,
+      33,
+      39
+     ],
+     "friends": [
+      4,
+      0,
+      3,
+      1,
+      6,
+      7,
+      5,
+      2
+     ],
+     "solution": [
+      21,
+      18,
+      39,
+      33,
+      31,
+      11,
+      10,
+      7
+     ],
+     "clues": [
+      [
+       "parity",
+       [
+        "n",
+        2
+       ],
+       null,
+       1
+      ],
+      [
+       "sum",
+       [
+        "friend",
+        [
+         "occ",
+         10
+        ]
+       ],
+       [
+        "n",
+        6
+       ],
+       21
+      ],
+      [
+       "sum",
+       [
+        "friend",
+        [
+         "n",
+         4
+        ]
+       ],
+       [
+        "n",
+        4
+       ],
+       41
+      ],
+      [
+       "parity",
+       [
+        "n",
+        1
+       ],
+       null,
+       0
+      ],
+      [
+       "diff",
+       [
+        "n",
+        2
+       ],
+       [
+        "below",
+        [
+         "n",
+         1
+        ]
+       ],
+       28
+      ],
+      [
+       "diff",
+       [
+        "below",
+        [
+         "n",
+         2
+        ]
+       ],
+       [
+        "n",
+        4
+       ],
+       2
+      ],
+      [
+       "sum",
+       [
+        "friend",
+        [
+         "n",
+         3
+        ]
+       ],
+       [
+        "n",
+        3
+       ],
+       51
+      ],
+      [
+       "sum",
+       [
+        "n",
+        0
+       ],
+       [
+        "n",
+        3
+       ],
+       54
+      ]
+     ],
+     "statements": [
+      "Hugo lives on an odd floor.",
+      "The floor numbers of the best friend of the person on floor 10 and Felix add up to 21.",
+      "The floor numbers of Jasper's best friend and Jasper add up to 41.",
+      "Ella lives on an even floor.",
+      "Hugo lives 28 floors above the person directly below Ella.",
+      "The person directly below Hugo lives 2 floors above Jasper.",
+      "The floor numbers of Ruby's best friend and Ruby add up to 51.",
+      "The floor numbers of Mia and Ruby add up to 54."
+     ],
+     "patterns": [
+      "direct",
+      "dfriend_occ",
+      "friend",
+      "direct",
+      "order",
+      "order",
+      "friend",
+      "direct"
+     ],
+     "n_deferred": 1,
+     "n_held": 0,
+     "residual_no_held": 1,
+     "n_necessary": 8,
+     "max_depth": 2,
+     "residual_no_deferred": 2,
+     "oracle": {
+      "rounds": 3,
+      "n_lines": 22,
+      "defer_fixes_before": [
+       6
+      ],
+      "chain": 1,
+      "unapplied": []
+     }
+    }
+   },
+   "target_sha256": "f8d0756ba11b8d90e842f323ff921f42edf6cf695de2d5c41dcce3bc847286a1"
+  },
+  {
+   "corpus_row": 2,
+   "spec": "nltw_e",
+   "pool_row": {
+    "qid": "3a9bfeb586bcab5d",
+    "prompt": "Mia, Hugo, Ella, Ava, Iris and Nora live on different floors of the same tower. The occupied floors are {1, 4, 20, 28, 33, 35}. Best friends: Mia's best friend is Nora, Hugo's best friend is Iris, Ella's best friend is Ava, Ava's best friend is Ella, Iris's best friend is Mia, Nora's best friend is Hugo. Here is what is known:\n - Ava lives on an odd floor.\n - Nora lives on a higher floor than Ella.\n - The floor numbers of the best friend of Mia's best friend and Nora add up to 55.\n - Ella lives 27 floors above Ava.\n - The floor numbers of Iris and the person on the highest floor add up to 39.\n - Nora lives 31 floors above the person directly above Ava.\nWork out which floor each person lives on. Answer with a comma-separated list like \"Mia=NUMBER, ...\" covering everyone.\n\nAnswer: ",
+    "question": "Mia, Hugo, Ella, Ava, Iris and Nora live on different floors of the same tower. The occupied floors are {1, 4, 20, 28, 33, 35}. Best friends: Mia's best friend is Nora, Hugo's best friend is Iris, Ella's best friend is Ava, Ava's best friend is Ella, Iris's best friend is Mia, Nora's best friend is Hugo. Here is what is known:\n - Ava lives on an odd floor.\n - Nora lives on a higher floor than Ella.\n - The floor numbers of the best friend of Mia's best friend and Nora add up to 55.\n - Ella lives 27 floors above Ava.\n - The floor numbers of Iris and the person on the highest floor add up to 39.\n - Nora lives 31 floors above the person directly above Ava.\nWork out which floor each person lives on. Answer with a comma-separated list like \"Mia=NUMBER, ...\" covering everyone.",
+    "answer": "Mia=33, Hugo=20, Ella=28, Ava=1, Iris=4, Nora=35",
+    "metadata": {
+     "source_dataset": "nl_tower",
+     "source_index": 13571,
+     "names": [
+      "Mia",
+      "Hugo",
+      "Ella",
+      "Ava",
+      "Iris",
+      "Nora"
+     ],
+     "domain": [
+      1,
+      4,
+      20,
+      28,
+      33,
+      35
+     ],
+     "friends": [
+      5,
+      4,
+      3,
+      2,
+      0,
+      1
+     ],
+     "solution": [
+      33,
+      20,
+      28,
+      1,
+      4,
+      35
+     ],
+     "clues": [
+      [
+       "parity",
+       [
+        "n",
+        3
+       ],
+       null,
+       1
+      ],
+      [
+       "gt",
+       [
+        "n",
+        5
+       ],
+       [
+        "n",
+        2
+       ],
+       null
+      ],
+      [
+       "sum",
+       [
+        "friend",
+        [
+         "friend",
+         [
+          "n",
+          0
+         ]
+        ]
+       ],
+       [
+        "n",
+        5
+       ],
+       55
+      ],
+      [
+       "diff",
+       [
+        "n",
+        2
+       ],
+       [
+        "n",
+        3
+       ],
+       27
+      ],
+      [
+       "sum",
+       [
+        "n",
+        4
+       ],
+       [
+        "rank",
+        5
+       ],
+       39
+      ],
+      [
+       "diff",
+       [
+        "n",
+        5
+       ],
+       [
+        "above",
+        [
+         "n",
+         3
+        ]
+       ],
+       31
+      ]
+     ],
+     "statements": [
+      "Ava lives on an odd floor.",
+      "Nora lives on a higher floor than Ella.",
+      "The floor numbers of the best friend of Mia's best friend and Nora add up to 55.",
+      "Ella lives 27 floors above Ava.",
+      "The floor numbers of Iris and the person on the highest floor add up to 39.",
+      "Nora lives 31 floors above the person directly above Ava."
+     ],
+     "patterns": [
+      "direct",
+      "direct",
+      "friend2",
+      "direct",
+      "rankn",
+      "order"
+     ],
+     "n_deferred": 0,
+     "n_held": 0,
+     "residual_no_held": 1,
+     "n_necessary": 6,
+     "max_depth": 2,
+     "residual_no_deferred": 1,
+     "oracle": {
+      "rounds": 2,
+      "n_lines": 17,
+      "defer_fixes_before": [],
+      "chain": 0,
+      "unapplied": []
+     }
+    }
+   },
+   "target_sha256": "21b2c4a067fc51114427a77b0ddf519a47759e00c6cc94b3ead8ece1f2dd90ab"
+  },
+  {
+   "corpus_row": 3,
+   "spec": "nltw_m0",
+   "pool_row": {
+    "qid": "7b36c3942495160d",
+    "prompt": "Owen, Noah, Zoe, Iris, Ella, Ava, Hugo, Lucas and Nora live on different floors of the same tower. The occupied floors are {3, 5, 9, 10, 11, 14, 19, 20, 23}. Best friends: Owen's best friend is Lucas, Noah's best friend is Owen, Zoe's best friend is Ava, Iris's best friend is Hugo, Ella's best friend is Noah, Ava's best friend is Nora, Hugo's best friend is Iris, Lucas's best friend is Ella, Nora's best friend is Zoe. Here is what is known:\n - The floor numbers of the best friend of Owen's best friend and Nora add up to 37.\n - Ella lives 4 floors above the best friend of Hugo's best friend.\n - Ava lives 11 floors above the best friend of the person on floor 10.\n - Owen lives 2 floors above the person on the lowest floor.\n - The person on the second-lowest floor lives 2 floors above Noah.\n - The floor numbers of Owen's best friend and Hugo add up to 21.\n - Nora lives on the highest floor.\n - Owen lives on an odd floor.\n - The floor numbers of Ava and the person on the highest floor add up to 43.\n - Noah lives on an odd floor.\nWork out which floor each person lives on. Answer with a comma-separated list like \"Owen=NUMBER, ...\" covering everyone.\n\nAnswer: ",
+    "question": "Owen, Noah, Zoe, Iris, Ella, Ava, Hugo, Lucas and Nora live on different floors of the same tower. The occupied floors are {3, 5, 9, 10, 11, 14, 19, 20, 23}. Best friends: Owen's best friend is Lucas, Noah's best friend is Owen, Zoe's best friend is Ava, Iris's best friend is Hugo, Ella's best friend is Noah, Ava's best friend is Nora, Hugo's best friend is Iris, Lucas's best friend is Ella, Nora's best friend is Zoe. Here is what is known:\n - The floor numbers of the best friend of Owen's best friend and Nora add up to 37.\n - Ella lives 4 floors above the best friend of Hugo's best friend.\n - Ava lives 11 floors above the best friend of the person on floor 10.\n - Owen lives 2 floors above the person on the lowest floor.\n - The person on the second-lowest floor lives 2 floors above Noah.\n - The floor numbers of Owen's best friend and Hugo add up to 21.\n - Nora lives on the highest floor.\n - Owen lives on an odd floor.\n - The floor numbers of Ava and the person on the highest floor add up to 43.\n - Noah lives on an odd floor.\nWork out which floor each person lives on. Answer with a comma-separated list like \"Owen=NUMBER, ...\" covering everyone.",
+    "answer": "Owen=5, Noah=3, Zoe=19, Iris=9, Ella=14, Ava=20, Hugo=10, Lucas=11, Nora=23",
+    "metadata": {
+     "source_dataset": "nl_tower",
+     "source_index": 30300,
+     "names": [
+      "Owen",
+      "Noah",
+      "Zoe",
+      "Iris",
+      "Ella",
+      "Ava",
+      "Hugo",
+      "Lucas",
+      "Nora"
+     ],
+     "domain": [
+      3,
+      5,
+      9,
+      10,
+      11,
+      14,
+      19,
+      20,
+      23
+     ],
+     "friends": [
+      7,
+      0,
+      5,
+      6,
+      1,
+      8,
+      3,
+      4,
+      2
+     ],
+     "solution": [
+      5,
+      3,
+      19,
+      9,
+      14,
+      20,
+      10,
+      11,
+      23
+     ],
+     "clues": [
+      [
+       "sum",
+       [
+        "friend",
+        [
+         "friend",
+         [
+          "n",
+          0
+         ]
+        ]
+       ],
+       [
+        "n",
+        8
+       ],
+       37
+      ],
+      [
+       "diff",
+       [
+        "n",
+        4
+       ],
+       [
+        "friend",
+        [
+         "friend",
+         [
+          "n",
+          6
+         ]
+        ]
+       ],
+       4
+      ],
+      [
+       "diff",
+       [
+        "n",
+        5
+       ],
+       [
+        "friend",
+        [
+         "occ",
+         10
+        ]
+       ],
+       11
+      ],
+      [
+       "diff",
+       [
+        "n",
+        0
+       ],
+       [
+        "rank",
+        0
+       ],
+       2
+      ],
+      [
+       "diff",
+       [
+        "rank",
+        1
+       ],
+       [
+        "n",
+        1
+       ],
+       2
+      ],
+      [
+       "sum",
+       [
+        "friend",
+        [
+         "n",
+         0
+        ]
+       ],
+       [
+        "n",
+        6
+       ],
+       21
+      ],
+      [
+       "extreme",
+       [
+        "n",
+        8
+       ],
+       null,
+       "high"
+      ],
+      [
+       "parity",
+       [
+        "n",
+        0
+       ],
+       null,
+       1
+      ],
+      [
+       "sum",
+       [
+        "n",
+        5
+       ],
+       [
+        "rank",
+        8
+       ],
+       43
+      ],
+      [
+       "parity",
+       [
+        "n",
+        1
+       ],
+       null,
+       1
+      ]
+     ],
+     "statements": [
+      "The floor numbers of the best friend of Owen's best friend and Nora add up to 37.",
+      "Ella lives 4 floors above the best friend of Hugo's best friend.",
+      "Ava lives 11 floors above the best friend of the person on floor 10.",
+      "Owen lives 2 floors above the person on the lowest floor.",
+      "The person on the second-lowest floor lives 2 floors above Noah.",
+      "The floor numbers of Owen's best friend and Hugo add up to 21.",
+      "Nora lives on the highest floor.",
+      "Owen lives on an odd floor.",
+      "The floor numbers of Ava and the person on the highest floor add up to 43.",
+      "Noah lives on an odd floor."
+     ],
+     "patterns": [
+      "friend2",
+      "friend2",
+      "dfriend_occ",
+      "rankn",
+      "rankn",
+      "friend",
+      "direct",
+      "direct",
+      "rankn",
+      "direct"
+     ],
+     "n_deferred": 1,
+     "n_held": 0,
+     "residual_no_held": 1,
+     "n_necessary": 10,
+     "max_depth": 2,
+     "residual_no_deferred": 2,
+     "oracle": {
+      "rounds": 2,
+      "n_lines": 26,
+      "defer_fixes_before": [
+       7
+      ],
+      "chain": 1,
+      "unapplied": [
+       7,
+       9
+      ]
+     }
+    }
+   },
+   "target_sha256": "daabe6fe59db0e38922ff050fb624a774f65f7ab55b7b38e2d755248d57b8bba"
+  }
+ ]
+}

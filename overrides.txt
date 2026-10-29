@@ -1,0 +1,3 @@
+# uv --override for the training environment (README, Install): numba, required by vLLM 0.23.0, declares
+# numpy<2.5, while the paper's runs used numpy 2.5.2 (the pin in pyproject.toml) with it.
+numpy==2.5.2

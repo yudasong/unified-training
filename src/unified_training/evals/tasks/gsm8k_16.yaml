@@ -1,0 +1,34 @@
+task: gsm8k_16
+dataset_path: openai/gsm8k
+dataset_name: main
+dataset_kwargs:
+  revision: e53f048856ff4f594e959d75785d2c2d37b678ee
+output_type: generate_until
+test_split: test
+doc_to_text: !function passk_utils.doc_to_gsm8k
+doc_to_target: !function passk_utils.gsm8k_gold_answer
+process_results: !function passk_utils.process_gsm8k_results
+num_fewshot: 0
+repeats: 16
+filter_list:
+  - name: all_16
+    filter:
+      - function: take_first_k
+        k: 16
+generation_kwargs:
+  do_sample: true
+  temperature: 1.0
+  top_k: 50
+  top_p: 0.95
+  max_gen_toks: 1024
+  until:
+    - <|im_end|>
+metric_list:
+  - {metric: sample_mean, aggregation: mean, higher_is_better: true}
+  - {metric: pass_at_1, aggregation: mean, higher_is_better: true}
+  - {metric: pass_at_2, aggregation: mean, higher_is_better: true}
+  - {metric: pass_at_4, aggregation: mean, higher_is_better: true}
+  - {metric: pass_at_8, aggregation: mean, higher_is_better: true}
+  - {metric: pass_at_16, aggregation: mean, higher_is_better: true}
+metadata:
+  version: 1.0

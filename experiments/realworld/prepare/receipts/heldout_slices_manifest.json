@@ -1,0 +1,204 @@
+{
+  "components": {
+    "code-meta-reasoning": {
+      "docs": 75,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 75,
+      "tokens": 150027,
+      "truncated": 67
+    },
+    "common_crawl-high-quality": {
+      "docs": 174,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 176,
+      "tokens": 151011,
+      "truncated": 28
+    },
+    "cranecode": {
+      "docs": 119,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 119,
+      "tokens": 150559,
+      "truncated": 23
+    },
+    "cranemath": {
+      "docs": 175,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 175,
+      "tokens": 150799,
+      "truncated": 13
+    },
+    "dolmino-math": {
+      "docs": 427,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 427,
+      "tokens": 150041,
+      "truncated": 0
+    },
+    "dolmino_1-flan": {
+      "docs": 376,
+      "rejected_consumed_or_anchor": 3,
+      "scanned": 387,
+      "tokens": 150047,
+      "truncated": 11
+    },
+    "gemini-reasoning-traces": {
+      "docs": 75,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 75,
+      "tokens": 150883,
+      "truncated": 71
+    },
+    "general_reasoning_mix": {
+      "docs": 78,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 78,
+      "tokens": 151024,
+      "truncated": 63
+    },
+    "llama_nemotron-reasoning-traces": {
+      "docs": 114,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 114,
+      "tokens": 150367,
+      "truncated": 23
+    },
+    "math-meta-reasoning": {
+      "docs": 141,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 141,
+      "tokens": 150475,
+      "truncated": 0
+    },
+    "megamatt": {
+      "docs": 219,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 219,
+      "tokens": 150177,
+      "truncated": 9
+    },
+    "nemotron-synth-qa": {
+      "docs": 286,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 286,
+      "tokens": 150008,
+      "truncated": 0
+    },
+    "olmocr_science_pdfs": {
+      "docs": 74,
+      "rejected_consumed_or_anchor": 17,
+      "scanned": 91,
+      "tokens": 151552,
+      "truncated": 74
+    },
+    "omr-rewrite-fullthoughts": {
+      "docs": 82,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 82,
+      "tokens": 151708,
+      "truncated": 52
+    },
+    "openthoughts2-reasoning-traces": {
+      "docs": 79,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 79,
+      "tokens": 150455,
+      "truncated": 63
+    },
+    "program_verifiable": {
+      "docs": 360,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 360,
+      "tokens": 150759,
+      "truncated": 0
+    },
+    "qwq-reasoning-traces": {
+      "docs": 74,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 74,
+      "tokens": 151552,
+      "truncated": 74
+    },
+    "reddit_to_flashcards": {
+      "docs": 2510,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 2511,
+      "tokens": 150037,
+      "truncated": 0
+    },
+    "stack_edu-fim": {
+      "docs": 150,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 150,
+      "tokens": 150639,
+      "truncated": 32
+    },
+    "stem-heavy-crawl": {
+      "docs": 145,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 145,
+      "tokens": 151995,
+      "truncated": 31
+    },
+    "tinymath-mind": {
+      "docs": 199,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 199,
+      "tokens": 150819,
+      "truncated": 14
+    },
+    "tinymath-pot": {
+      "docs": 486,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 486,
+      "tokens": 150270,
+      "truncated": 0
+    },
+    "tulu-3-sft": {
+      "docs": 186,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 186,
+      "tokens": 150278,
+      "truncated": 21
+    },
+    "wiki_to_rcqa": {
+      "docs": 824,
+      "rejected_consumed_or_anchor": 0,
+      "scanned": 824,
+      "tokens": 150068,
+      "truncated": 0
+    }
+  },
+  "construction": "upstream tail continuation past fresh-anchor staging; every document hash-verified absent from BOTH the consumed 10B mid-train corpus and the full fresh anchor corpus",
+  "fresh_corpus": "<local path>",
+  "max_doc_tokens": 2048,
+  "mixture_token_weights": {
+    "code-meta-reasoning": 0.004357349395350532,
+    "common_crawl-high-quality": 0.2100040253192726,
+    "cranecode": 0.10669318536891796,
+    "cranemath": 0.06757559522014797,
+    "dolmino-math": 0.1044295812011218,
+    "dolmino_1-flan": 0.05165110378175291,
+    "gemini-reasoning-traces": 0.002381586657639051,
+    "general_reasoning_mix": 0.0181374180352581,
+    "llama_nemotron-reasoning-traces": 0.01184249678731516,
+    "math-meta-reasoning": 0.0036962490256316964,
+    "megamatt": 0.02051365113150262,
+    "nemotron-synth-qa": 0.041350327243632475,
+    "olmocr_science_pdfs": 0.04736497489339039,
+    "omr-rewrite-fullthoughts": 0.008300132030901828,
+    "openthoughts2-reasoning-traces": 0.011884013767235344,
+    "program_verifiable": 0.0017281812449971116,
+    "qwq-reasoning-traces": 0.017715484930334157,
+    "reddit_to_flashcards": 0.056525501396471875,
+    "stack_edu-fim": 0.11533963726398616,
+    "stem-heavy-crawl": 0.0471548733510297,
+    "tinymath-mind": 0.011498398961362217,
+    "tinymath-pot": 0.0035555116027044115,
+    "tulu-3-sft": 0.010871071166392396,
+    "wiki_to_rcqa": 0.025429650223651522
+  },
+  "oracle": "<local path>",
+  "target_tokens_per_component": 150000,
+  "tokenizer": "<local path>"
+}

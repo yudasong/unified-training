@@ -1,0 +1,180 @@
+{
+  "derived": "fresh-disjoint sample; every document hash-verified absent from the consumed 10B mid-train corpus",
+  "hash_oracle": "<local path>",
+  "mixture_source": "<local path>",
+  "realized_weights": {
+    "code-meta-reasoning": 0.004357524491052402,
+    "common_crawl-high-quality": 0.20999499454228238,
+    "cranecode": 0.10669090607024323,
+    "cranemath": 0.06757324520732683,
+    "dolmino-math": 0.10442638463311121,
+    "dolmino_1-flan": 0.051649000371191515,
+    "gemini-reasoning-traces": 0.0023881679462378434,
+    "general_reasoning_mix": 0.018147068124998705,
+    "llama_nemotron-reasoning-traces": 0.011843238065483989,
+    "math-meta-reasoning": 0.003696535844236229,
+    "megamatt": 0.02051286306477702,
+    "nemotron-synth-qa": 0.04134858979182453,
+    "olmocr_science_pdfs": 0.0473698583993282,
+    "omr-rewrite-fullthoughts": 0.00830694510518177,
+    "openthoughts2-reasoning-traces": 0.011884562230360473,
+    "program_verifiable": 0.0017281072582128773,
+    "qwq-reasoning-traces": 0.017715171304672702,
+    "reddit_to_flashcards": 0.05652302992528708,
+    "stack_edu-fim": 0.11533525419203185,
+    "stem-heavy-crawl": 0.04715436396900487,
+    "tinymath-mind": 0.011498507374284523,
+    "tinymath-pot": 0.0035557880945622966,
+    "tulu-3-sft": 0.010871021239688788,
+    "wiki_to_rcqa": 0.025428872754618713
+  },
+  "repo_id": "allenai/dolma3_dolmino_mix-100B-1025",
+  "revision": "f23942ae8a8114af6e992efe8188ce8c531acd16",
+  "stats": {
+    "code-meta-reasoning": {
+      "excluded_consumed": 0,
+      "kept_docs": 736,
+      "kept_tokens": 2178859,
+      "scanned": 1024
+    },
+    "common_crawl-high-quality": {
+      "excluded_consumed": 0,
+      "kept_docs": 102625,
+      "kept_tokens": 105002160,
+      "scanned": 102641
+    },
+    "cranecode": {
+      "excluded_consumed": 80,
+      "kept_docs": 31377,
+      "kept_tokens": 53347822,
+      "scanned": 31659
+    },
+    "cranemath": {
+      "excluded_consumed": 107,
+      "kept_docs": 34871,
+      "kept_tokens": 33788123,
+      "scanned": 35236
+    },
+    "dolmino-math": {
+      "excluded_consumed": 0,
+      "kept_docs": 36893,
+      "kept_tokens": 52215511,
+      "scanned": 37128
+    },
+    "dolmino_1-flan": {
+      "excluded_consumed": 0,
+      "kept_docs": 203264,
+      "kept_tokens": 25825647,
+      "scanned": 203698
+    },
+    "gemini-reasoning-traces": {
+      "excluded_consumed": 0,
+      "kept_docs": 247,
+      "kept_tokens": 1194137,
+      "scanned": 512
+    },
+    "general_reasoning_mix": {
+      "excluded_consumed": 0,
+      "kept_docs": 1829,
+      "kept_tokens": 9073937,
+      "scanned": 2048
+    },
+    "llama_nemotron-reasoning-traces": {
+      "excluded_consumed": 0,
+      "kept_docs": 2048,
+      "kept_tokens": 5921882,
+      "scanned": 2325
+    },
+    "math-meta-reasoning": {
+      "excluded_consumed": 0,
+      "kept_docs": 1770,
+      "kept_tokens": 1848350,
+      "scanned": 2048
+    },
+    "megamatt": {
+      "excluded_consumed": 1,
+      "kept_docs": 14981,
+      "kept_tokens": 10256887,
+      "scanned": 15269
+    },
+    "nemotron-synth-qa": {
+      "excluded_consumed": 0,
+      "kept_docs": 38153,
+      "kept_tokens": 20675213,
+      "scanned": 38179
+    },
+    "olmocr_science_pdfs": {
+      "excluded_consumed": 91,
+      "kept_docs": 2473,
+      "kept_tokens": 23685981,
+      "scanned": 2574
+    },
+    "omr-rewrite-fullthoughts": {
+      "excluded_consumed": 0,
+      "kept_docs": 1244,
+      "kept_tokens": 4153657,
+      "scanned": 1536
+    },
+    "openthoughts2-reasoning-traces": {
+      "excluded_consumed": 0,
+      "kept_docs": 1056,
+      "kept_tokens": 5942545,
+      "scanned": 1536
+    },
+    "program_verifiable": {
+      "excluded_consumed": 0,
+      "kept_docs": 1835,
+      "kept_tokens": 864092,
+      "scanned": 2048
+    },
+    "qwq-reasoning-traces": {
+      "excluded_consumed": 0,
+      "kept_docs": 747,
+      "kept_tokens": 8857979,
+      "scanned": 1024
+    },
+    "reddit_to_flashcards": {
+      "excluded_consumed": 137,
+      "kept_docs": 469825,
+      "kept_tokens": 28262770,
+      "scanned": 470318
+    },
+    "stack_edu-fim": {
+      "excluded_consumed": 0,
+      "kept_docs": 65896,
+      "kept_tokens": 57670188,
+      "scanned": 66376
+    },
+    "stem-heavy-crawl": {
+      "excluded_consumed": 0,
+      "kept_docs": 26289,
+      "kept_tokens": 23578229,
+      "scanned": 26637
+    },
+    "tinymath-mind": {
+      "excluded_consumed": 0,
+      "kept_docs": 8653,
+      "kept_tokens": 5749509,
+      "scanned": 8696
+    },
+    "tinymath-pot": {
+      "excluded_consumed": 0,
+      "kept_docs": 3823,
+      "kept_tokens": 1777973,
+      "scanned": 4096
+    },
+    "tulu-3-sft": {
+      "excluded_consumed": 0,
+      "kept_docs": 6760,
+      "kept_tokens": 5435752,
+      "scanned": 7049
+    },
+    "wiki_to_rcqa": {
+      "excluded_consumed": 1,
+      "kept_docs": 69703,
+      "kept_tokens": 12715001,
+      "scanned": 70108
+    }
+  },
+  "total_kept_tokens": 500022204
+}

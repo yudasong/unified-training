@@ -1,0 +1,501 @@
+{
+ "recorded_from": "the published data as built for the paper; paths are relative to NL_TOWER_WORKDIR. md5 of the bytes; rows and first qids for JSON / JSONL files. `check` says how a rebuilt copy is compared (manifest.py).",
+ "groups": {
+  "tests": [
+   {
+    "path": "data/nltw_e/corpus_tw1/test.jsonl",
+    "built_by": "prepare_data.py tests: test split of nltw_e",
+    "bytes": 3198258,
+    "md5": "2422c3d1fc99bb8f70d48607e190f91a",
+    "rows": 1024,
+    "first_qids": [
+     "409f62954b4b51bb",
+     "95513264b62ddefb",
+     "d08b0e8d20fc7bb4",
+     "9cdcb084ee30faa8",
+     "abd1b027245a2ccf"
+    ]
+   },
+   {
+    "path": "data/nltw_m0/corpus_tw1/test.jsonl",
+    "built_by": "prepare_data.py tests: test split of nltw_m0",
+    "bytes": 3959780,
+    "md5": "0d9e5adf9c9cda0df46af1544aa437ec",
+    "rows": 1024,
+    "first_qids": [
+     "80e6a08064ab2812",
+     "c84b0da5ae956013",
+     "4ed2d1c4d19ef9c7",
+     "d3cbf1812744735e",
+     "d4f16241b58e6a3d"
+    ]
+   },
+   {
+    "path": "data/nltw_m/corpus_tw1/test.jsonl",
+    "built_by": "prepare_data.py tests: test split of nltw_m",
+    "bytes": 4259754,
+    "md5": "2da059c5645bc02ce92a6a32afb106ea",
+    "rows": 1024,
+    "first_qids": [
+     "9f856ed962856325",
+     "79f315b6030aae26",
+     "4a490211dd28bc8a",
+     "47f21db3f5291626",
+     "36f71103e3a2f283"
+    ]
+   },
+   {
+    "path": "data/nltw_h/corpus_tw1/test.jsonl",
+    "built_by": "prepare_data.py tests: test split of nltw_h",
+    "bytes": 4860895,
+    "md5": "bf23c4dc0a8044cf5a2f2c50c78b798e",
+    "rows": 1024,
+    "first_qids": [
+     "596e1fa2ba6cef8c",
+     "01a15b41d16de291",
+     "dd58fed045fc3f59",
+     "c16f1ca9f4823ed3",
+     "cf67d905ae906fd9"
+    ]
+   },
+   {
+    "path": "data/nltw_hb/corpus_tw1/test.jsonl",
+    "built_by": "prepare_data.py tests: test split of nltw_hb",
+    "bytes": 5005474,
+    "md5": "4df30cc23bd5cfa18171243ae0e79e5f",
+    "rows": 1024,
+    "first_qids": [
+     "a638e7a4e9d114cc",
+     "cfc7960c81594d43",
+     "88c45126e8a59b28",
+     "15ba0f5794486979",
+     "e2ddeec5bd504014"
+    ]
+   },
+   {
+    "path": "data/nltw_hb12/corpus_tw1/test.jsonl",
+    "built_by": "prepare_data.py tests: test split of nltw_hb12",
+    "bytes": 5576457,
+    "md5": "394d7964ff508cffc44977a3515da2e6",
+    "rows": 1024,
+    "first_qids": [
+     "712dcba08289002c",
+     "e61719e1cf77eae3",
+     "9db266c900059b4b",
+     "ce6bea92f7423e17",
+     "72a15114b1526ce3"
+    ]
+   }
+  ],
+  "pools": [
+   {
+    "path": "data/nltw_e/corpus_tw1/pool.jsonl",
+    "built_by": "prepare_data.py tests: pool of nltw_e",
+    "bytes": 15632062,
+    "md5": "8d91f88c23b1144e541fc52841587343",
+    "rows": 5000,
+    "first_qids": [
+     "3fa0cb602f87a381",
+     "b1f11bd766bbccf3",
+     "d7379dd7fa965f46",
+     "384ba75ee743a829",
+     "36a2dfa22b1656cf"
+    ]
+   },
+   {
+    "path": "data/nltw_m0/corpus_tw1/pool.jsonl",
+    "built_by": "prepare_data.py tests: pool of nltw_m0",
+    "bytes": 19314573,
+    "md5": "97d28ef64bc6d1651ee22879b1885653",
+    "rows": 5000,
+    "first_qids": [
+     "401b432efe03bf80",
+     "a46535474500b0d9",
+     "90a72e5d8acaf0a9",
+     "12506656ad098c43",
+     "2a206a4efd1e640a"
+    ]
+   },
+   {
+    "path": "data/nltw_m/corpus_tw1/pool.jsonl",
+    "built_by": "prepare_data.py tests: pool of nltw_m",
+    "bytes": 24987933,
+    "md5": "3db107f5626385470377991a3e55296b",
+    "rows": 6000,
+    "first_qids": [
+     "1465c433f1019892",
+     "c220ee0f9dacb5ea",
+     "ae1180dfa3ba0236",
+     "ccf03db5f660ed4c",
+     "20825f60372f1e8b"
+    ]
+   },
+   {
+    "path": "data/nltw_h/corpus_tw1/pool.jsonl",
+    "built_by": "prepare_data.py tests: pool of nltw_h",
+    "bytes": 28461025,
+    "md5": "9380e46975eb4fe5e67be1c6aba9d606",
+    "rows": 6000,
+    "first_qids": [
+     "9204c1e96250c7bf",
+     "943ef4b85c529d79",
+     "8bc04ca84f24421d",
+     "57a6cc4473787b20",
+     "f30a273a3a2221df"
+    ]
+   },
+   {
+    "path": "data/nltw_h9/corpus_tw1/pool.jsonl",
+    "built_by": "prepare_data.py tests: pool of nltw_h9",
+    "bytes": 45599457,
+    "md5": "b9357e206a318b2299d1d3c6b7679110",
+    "rows": 10000,
+    "first_qids": [
+     "d50f61b6dfc75840",
+     "b344e5098c82b668",
+     "f3813fcf352a9f74",
+     "7675715f8a503a24",
+     "a6da244b1591fd5b"
+    ]
+   },
+   {
+    "path": "data/nltw_hb/corpus_tw1/pool.jsonl",
+    "built_by": "prepare_data.py tests: pool of nltw_hb",
+    "bytes": 49050869,
+    "md5": "8914e7cdfd0c6ee5dcb4648bca8c5a22",
+    "rows": 10000,
+    "first_qids": [
+     "dd052e20246069d7",
+     "1367d6c1ff4fac46",
+     "6356f40ff6511828",
+     "d236ddeed58ad9de",
+     "2c82b2c0b2434f0b"
+    ]
+   }
+  ],
+  "rl_pools": [
+   {
+    "path": "results/rl_prompts/nltw_m0.jsonl",
+    "built_by": "prepare_data.py rl-pools: nltw_m0 (seed 777)",
+    "bytes": 39036665,
+    "md5": "2ee3dfa7ee28a1b2cac338bdc98e4e14",
+    "rows": 10000,
+    "first_qids": [
+     "cf3799d527ec01ba",
+     "23faea758ac5b7aa",
+     "c66898df2d929069",
+     "e7262a0e5236d8b7",
+     "f863e0cbace299fb"
+    ]
+   },
+   {
+    "path": "results/rl_prompts/nltw_m.jsonl",
+    "built_by": "prepare_data.py rl-pools: nltw_m (seed 777)",
+    "bytes": 84132331,
+    "md5": "0a8e311cf7cfcec57375b424e31d181d",
+    "rows": 20000,
+    "first_qids": [
+     "b6dff498fcac8fc5",
+     "9c593e0e9734ce4c",
+     "c19c1e78bb263438",
+     "92228ce87b7d8e12",
+     "45f60395588db1f1"
+    ]
+   },
+   {
+    "path": "results/rl_prompts/nltw_h.jsonl",
+    "built_by": "prepare_data.py rl-pools: nltw_h (seed 777)",
+    "bytes": 47883441,
+    "md5": "4aab5d22427b12d7b4985f780c686259",
+    "rows": 10000,
+    "first_qids": [
+     "c06c27b8d324009d",
+     "01042af5404f107f",
+     "39bbf1a25ff0805a",
+     "6c824e90e6840c9b",
+     "2105cbac091a0ff9"
+    ]
+   }
+  ],
+  "corpus": [
+   {
+    "path": "data/nltw_e/corpus_tw1L/pool.jsonl",
+    "built_by": "prepare_data.py corpus: tw1L questions of nltw_e",
+    "bytes": 125074553,
+    "md5": "f143f0f9010af2d0a459198a672f1145",
+    "rows": 40000,
+    "first_qids": [
+     "8cf983fcddc505b5",
+     "d5447de1dc6d5448",
+     "11de464bb9590eb9",
+     "f3590b6b095376b0",
+     "4694feb44f1787c4"
+    ]
+   },
+   {
+    "path": "data/nltw_m0/corpus_tw1L/pool.jsonl",
+    "built_by": "prepare_data.py corpus: tw1L questions of nltw_m0",
+    "bytes": 154642965,
+    "md5": "63ca3f532c0d866c5e35190b82e8c3fe",
+    "rows": 40000,
+    "first_qids": [
+     "9567bea0c330f093",
+     "29ee622dbda7c3fc",
+     "44605586b6eabf27",
+     "6ea6d109ad7036ac",
+     "de511e1b6e1c4905"
+    ]
+   },
+   {
+    "path": "data/nltw_e/corpus_tw1Xnew/pool.jsonl",
+    "built_by": "prepare_data.py corpus: tw1Xnew questions of nltw_e",
+    "bytes": 187661428,
+    "md5": "76746ab8ddf5dd9e320685b163605f35",
+    "rows": 60000,
+    "first_qids": [
+     "7fb367f40a12fe98",
+     "3f8e042e7229e566",
+     "09a1e95f4dfe5a53",
+     "23a4e31063a97e0a",
+     "d2559ddaf6a9e48f"
+    ]
+   },
+   {
+    "path": "data/nltw_m0/corpus_tw1Xnew/pool.jsonl",
+    "built_by": "prepare_data.py corpus: tw1Xnew questions of nltw_m0",
+    "bytes": 231936675,
+    "md5": "9c95bff7148a63ba11f5f1785b681e75",
+    "rows": 60000,
+    "first_qids": [
+     "95a2083c313dcbfa",
+     "572aa7960f0a1923",
+     "6a8ccda1ded019d1",
+     "5ea59191f22acff2",
+     "1e1a2cad58d9d190"
+    ]
+   },
+   {
+    "path": "data/nltw_e/corpus_tw1X/pool.jsonl",
+    "built_by": "prepare_data.py corpus: tw1X questions of nltw_e",
+    "bytes": 312735981,
+    "md5": "72686dc20242c66cbd0464cd3a8fc1dd",
+    "rows": 100000,
+    "first_qids": [
+     "8cf983fcddc505b5",
+     "d5447de1dc6d5448",
+     "11de464bb9590eb9",
+     "f3590b6b095376b0",
+     "4694feb44f1787c4"
+    ]
+   },
+   {
+    "path": "data/nltw_m0/corpus_tw1X/pool.jsonl",
+    "built_by": "prepare_data.py corpus: tw1X questions of nltw_m0",
+    "bytes": 386579640,
+    "md5": "f4bdcb026ccdb111aad6cbe3ce6db1a3",
+    "rows": 100000,
+    "first_qids": [
+     "9567bea0c330f093",
+     "29ee622dbda7c3fc",
+     "44605586b6eabf27",
+     "6ea6d109ad7036ac",
+     "de511e1b6e1c4905"
+    ]
+   },
+   {
+    "path": "data/nltw_e/corpus_tw1X/cot_k4.jsonl",
+    "built_by": "prepare_data.py corpus: solver traces of nltw_e (K=4, seed 7)",
+    "bytes": 784042966,
+    "md5": "22c7eee43c34ae219253e86d9fd81307",
+    "rows": 398061,
+    "first_qids": [
+     "95d622cae992c1da",
+     "7770774b71891701",
+     "5d67d5e36041e5bd",
+     "baf227ea74c33baa",
+     "cb9be6b625144861"
+    ]
+   },
+   {
+    "path": "data/nltw_m0/corpus_tw1X/cot_k4.jsonl",
+    "built_by": "prepare_data.py corpus: solver traces of nltw_m0 (K=4, seed 7)",
+    "bytes": 1022390876,
+    "md5": "fceae2f0f426b9e069dc60303835db78",
+    "rows": 398114,
+    "first_qids": [
+     "a23245cf33d1cc53",
+     "452eb48a7ac2c9f0",
+     "d7e8c3627cbfd196",
+     "3c9da683a1b59e76",
+     "f5661451e93a491c"
+    ]
+   },
+   {
+    "path": "data/nltw_m/corpus_tw1L/exclude.jsonl",
+    "built_by": "prepare_data.py corpus: exclusion list of the question pools",
+    "bytes": 176900640,
+    "md5": "6ebc4e4fb8a6b8ddb8729ba3f1ec82fe",
+    "rows": 139404,
+    "first_qids": [
+     "409f62954b4b51bb",
+     "95513264b62ddefb",
+     "d08b0e8d20fc7bb4",
+     "9cdcb084ee30faa8",
+     "abd1b027245a2ccf"
+    ]
+   },
+   {
+    "path": "data/nltw_m/corpus_tw1X/exclude.jsonl",
+    "built_by": "prepare_data.py corpus: exclusion list of the tw1X audit (same rows)",
+    "bytes": 176900640,
+    "md5": "6ebc4e4fb8a6b8ddb8729ba3f1ec82fe",
+    "rows": 139404,
+    "first_qids": [
+     "409f62954b4b51bb",
+     "95513264b62ddefb",
+     "d08b0e8d20fc7bb4",
+     "9cdcb084ee30faa8",
+     "abd1b027245a2ccf"
+    ]
+   },
+   {
+    "path": "data/nltw_m/corpus_tw1X/cot.jsonl",
+    "built_by": "prepare_data.py corpus: mix (seed 20260921), the 500M-token trace corpus tw1X",
+    "bytes": 1806433842,
+    "md5": "f99a31a2f7bb2bd1237f2f8a2476647e",
+    "rows": 796175,
+    "first_qids": [
+     "a916c2451850cde3",
+     "3a5358fe850efaf9",
+     "3a9bfeb586bcab5d",
+     "7b36c3942495160d",
+     "5b8e30e65621403a"
+    ]
+   },
+   {
+    "path": "data/nltw_m/corpus_tw1X/contamination_audit.json",
+    "built_by": "prepare_data.py corpus: contamination audit",
+    "check": "audit_result",
+    "bytes": 653,
+    "md5": "24ef43897a9da83ded262cff2232ab1a",
+    "audit_result": {
+     "rows": 796175,
+     "unique_questions": 200000,
+     "overlap_text": {},
+     "overlap_hash": {},
+     "total_overlap": 0
+    },
+    "note": "the recorded file also stores an absolute corpus path and a reference audit of an earlier corpus; a rebuild stores the path relative to the work directory"
+   }
+  ],
+  "mixes": [
+   {
+    "path": "unified_data/nltw_m_train.json",
+    "built_by": "prepare_data.py mixes",
+    "bytes": 36958610,
+    "md5": "08d9e26529c5361b89ea76313945be8a",
+    "rows": 28570,
+    "first_qids": [
+     "ff126453fd64ad5a",
+     "43502b594f0f4b4b",
+     "1a49cc411a150a0d",
+     "0a1538317397b918",
+     "8d60bfb298fb5ec6"
+    ]
+   },
+   {
+    "path": "unified_data/nltw_m_test.json",
+    "built_by": "prepare_data.py mixes",
+    "bytes": 1352999,
+    "md5": "30b50ee2be7d1b8b75f4a972fd8344cc",
+    "rows": 1024,
+    "first_qids": [
+     "9f856ed962856325",
+     "79f315b6030aae26",
+     "4a490211dd28bc8a",
+     "47f21db3f5291626",
+     "36f71103e3a2f283"
+    ]
+   },
+   {
+    "path": "unified_data/nltw_hbmix_train.json",
+    "built_by": "prepare_data.py mixes",
+    "bytes": 43384861,
+    "md5": "3d01fe9e6d993efd6cc0cbc5ddeca315",
+    "rows": 31666,
+    "first_qids": [
+     "efc1a724901d32ac",
+     "efd4ccfad4c53746",
+     "e7afe53a328da0fc",
+     "9c8060182dd375a0",
+     "3199c0207c295a88"
+    ]
+   },
+   {
+    "path": "unified_data/nltw_hbmix_test.json",
+    "built_by": "prepare_data.py mixes",
+    "bytes": 1588298,
+    "md5": "56021b67c4cb6aaa9b9e33291d9b3ad1",
+    "rows": 1024,
+    "first_qids": [
+     "25713dad51339309",
+     "63346cce8724b401",
+     "df5e1aa1d0af27ba",
+     "1ea8080837898801",
+     "a6f0acf6368f8157"
+    ]
+   }
+  ],
+  "demos": [
+   {
+    "path": "unified_data/demos_tw1X.jsonl",
+    "built_by": "prepare_data.py demos: demo JSONL",
+    "bytes": 1723880601,
+    "md5": "aef2fb4e53d23ff1ad2d84c7f084a2b7",
+    "rows": 796175,
+    "first_qids": [
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   },
+   {
+    "path": "unified_data/anchors/demos_tw1X_resp/manifest.json",
+    "built_by": "prepare_data.py demos: anchor round manifest (mask response)",
+    "check": "anchor_manifest",
+    "bytes": 989,
+    "md5": "691ed0ca8977fa6e6530c7a83c5645a6",
+    "expected": {
+     "kind": "anchor",
+     "format": "pairs",
+     "mask": "response",
+     "eos_token_id": 50256,
+     "anchor_weight": 1.0,
+     "max_prompt_tokens": 640,
+     "max_response_tokens": 1280,
+     "tokenization": "tok(prompt,add_special_tokens=False) + tok(response,add_special_tokens=False) + [eos]",
+     "n_prompt_tokens": 205518315,
+     "n_response_tokens_incl_eos": 304424398,
+     "tokens_sha256": "3236eab4835aaca132b20f4895c0242719ae0b628f2a8a77826e2c4a7a520728",
+     "n_episodes": 796175,
+     "n_tokens": 509942713,
+     "n_weighted_tokens": 304424398,
+     "n_supervised_tokens": 304424398,
+     "supervised_token_count_basis": "count(token_weight > 0)",
+     "max_token_id": 50256,
+     "mean_reward": 0.0,
+     "mean_weight": 1.0
+    },
+    "note": "the recorded round was built as 16 shards and merged: source_jsonl, tokenizer and merged_from_shards are provenance, and mean_response_len is the first shard's value"
+   },
+   {
+    "path": "unified_data/anchors/demos_tw1X_resp/index.npy",
+    "built_by": "prepare_data.py demos: anchor round index",
+    "bytes": 25477856,
+    "md5": "f042d7aad41598f5a7a3ff873916c979"
+   }
+  ]
+ }
+}

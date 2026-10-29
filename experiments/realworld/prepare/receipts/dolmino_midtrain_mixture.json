@@ -1,0 +1,153 @@
+{
+  "components": {
+    "code-meta-reasoning": {
+      "bytes": 204806882,
+      "docs": 27363,
+      "gpt2_tokens": 45998464
+    },
+    "common_crawl-high-quality": {
+      "bytes": 9688467913,
+      "docs": 1534917,
+      "gpt2_tokens": 2216912559
+    },
+    "cranecode": {
+      "bytes": 2809980561,
+      "docs": 655845,
+      "gpt2_tokens": 1126309185
+    },
+    "cranemath": {
+      "bytes": 1967771496,
+      "docs": 737929,
+      "gpt2_tokens": 713363401
+    },
+    "dolmino-math": {
+      "bytes": 4214821970,
+      "docs": 1590032,
+      "gpt2_tokens": 1102413393
+    },
+    "dolmino_1-flan": {
+      "bytes": 2123041852,
+      "docs": 1297915,
+      "gpt2_tokens": 545256123
+    },
+    "gemini-reasoning-traces": {
+      "bytes": 60923256,
+      "docs": 5345,
+      "gpt2_tokens": 25141277
+    },
+    "general_reasoning_mix": {
+      "bytes": 627776057,
+      "docs": 90789,
+      "gpt2_tokens": 191468091
+    },
+    "llama_nemotron-reasoning-traces": {
+      "bytes": 403680013,
+      "docs": 8802,
+      "gpt2_tokens": 125015603
+    },
+    "math-meta-reasoning": {
+      "bytes": 100223790,
+      "docs": 16289,
+      "gpt2_tokens": 39019542
+    },
+    "megamatt": {
+      "bytes": 662386020,
+      "docs": 322394,
+      "gpt2_tokens": 216552853
+    },
+    "nemotron-synth-qa": {
+      "bytes": 2010010759,
+      "docs": 890612,
+      "gpt2_tokens": 436515727
+    },
+    "olmocr_science_pdfs": {
+      "bytes": 2217368129,
+      "docs": 61883,
+      "gpt2_tokens": 500009500
+    },
+    "omr-rewrite-fullthoughts": {
+      "bytes": 237595400,
+      "docs": 29341,
+      "gpt2_tokens": 87620544
+    },
+    "openthoughts2-reasoning-traces": {
+      "bytes": 378603134,
+      "docs": 23260,
+      "gpt2_tokens": 125453878
+    },
+    "program_verifiable": {
+      "bytes": 42376484,
+      "docs": 10099,
+      "gpt2_tokens": 18243587
+    },
+    "qwq-reasoning-traces": {
+      "bytes": 529570586,
+      "docs": 15893,
+      "gpt2_tokens": 187013944
+    },
+    "reddit_to_flashcards": {
+      "bytes": 2373778151,
+      "docs": 8756357,
+      "gpt2_tokens": 596712819
+    },
+    "stack_edu-fim": {
+      "bytes": 2699288910,
+      "docs": 873675,
+      "gpt2_tokens": 1217585663
+    },
+    "stem-heavy-crawl": {
+      "bytes": 2102910735,
+      "docs": 571094,
+      "gpt2_tokens": 497791558
+    },
+    "tinymath-mind": {
+      "bytes": 334220944,
+      "docs": 183429,
+      "gpt2_tokens": 121383126
+    },
+    "tinymath-pot": {
+      "bytes": 96103532,
+      "docs": 82526,
+      "gpt2_tokens": 37533844
+    },
+    "tulu-3-sft": {
+      "bytes": 469611851,
+      "docs": 246103,
+      "gpt2_tokens": 114760725
+    },
+    "wiki_to_rcqa": {
+      "bytes": 1206051634,
+      "docs": 1371600,
+      "gpt2_tokens": 268448716
+    }
+  },
+  "duplicate_texts_within_corpus": 116372,
+  "token_weights": {
+    "code-meta-reasoning": 0.004357349395350532,
+    "common_crawl-high-quality": 0.2100040253192726,
+    "cranecode": 0.10669318536891796,
+    "cranemath": 0.06757559522014797,
+    "dolmino-math": 0.1044295812011218,
+    "dolmino_1-flan": 0.05165110378175291,
+    "gemini-reasoning-traces": 0.002381586657639051,
+    "general_reasoning_mix": 0.0181374180352581,
+    "llama_nemotron-reasoning-traces": 0.01184249678731516,
+    "math-meta-reasoning": 0.0036962490256316964,
+    "megamatt": 0.02051365113150262,
+    "nemotron-synth-qa": 0.041350327243632475,
+    "olmocr_science_pdfs": 0.04736497489339039,
+    "omr-rewrite-fullthoughts": 0.008300132030901828,
+    "openthoughts2-reasoning-traces": 0.011884013767235344,
+    "program_verifiable": 0.0017281812449971116,
+    "qwq-reasoning-traces": 0.017715484930334157,
+    "reddit_to_flashcards": 0.056525501396471875,
+    "stack_edu-fim": 0.11533963726398616,
+    "stem-heavy-crawl": 0.0471548733510297,
+    "tinymath-mind": 0.011498398961362217,
+    "tinymath-pot": 0.0035555116027044115,
+    "tulu-3-sft": 0.010871071166392396,
+    "wiki_to_rcqa": 0.025429650223651522
+  },
+  "total_docs": 19403492,
+  "total_gpt2_tokens": 10556524122
+}

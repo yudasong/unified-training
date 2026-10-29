@@ -1,0 +1,119 @@
+{
+ "description": "OpenCodeInstruct rows dropped from the coding pool by the pre-filter benchmark scan (rarest 16-token fingerprints of HumanEval/13, 19, 94, 105, 162; the full-question scan matched nothing). The fingerprint choice depends on corpus token frequencies, which were measured on the four-source pool, so the reproduction drops exactly these rows.",
+ "rows": [
+  {
+   "source_file": "opencodeinstruct/data/train-00000-of-00050.parquet",
+   "source_row_index": 5515,
+   "source_id": "opencodeinstruct:5515",
+   "conversation_sha256": "dfe27e4a0b9ba7aa5a42b64e692484cd7c951f31b071ed017c429fa27d162313"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00000-of-00050.parquet",
+   "source_row_index": 14175,
+   "source_id": "opencodeinstruct:14175",
+   "conversation_sha256": "02788697319d080b59ff4d07a5244c138da80a9b711aa1dbc8930f1c05727419"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00000-of-00050.parquet",
+   "source_row_index": 68514,
+   "source_id": "opencodeinstruct:68514",
+   "conversation_sha256": "d485127953605764d313b60dc137bdb4dfb4ba85efb7d38997b203684d68069a"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00000-of-00050.parquet",
+   "source_row_index": 73764,
+   "source_id": "opencodeinstruct:73764",
+   "conversation_sha256": "3eb1cd315206dcb9d182dfaab325a2a2f32143d8d603af68ffda700286eea5bf"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00000-of-00050.parquet",
+   "source_row_index": 81785,
+   "source_id": "opencodeinstruct:81785",
+   "conversation_sha256": "7f4c192ebc0dcf0e181c26167816da756c7bfc6ff0e10e58211cebde4b23f5f9"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00000-of-00050.parquet",
+   "source_row_index": 83936,
+   "source_id": "opencodeinstruct:83936",
+   "conversation_sha256": "0ee4e02fef221181a31d51fbe32664fdf2fd87f7305642a967687b730f8eb631"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00001-of-00050.parquet",
+   "source_row_index": 106239,
+   "source_id": "opencodeinstruct:106239",
+   "conversation_sha256": "38f3da4da84707ff5435a60b552f1ceac10e138f0dfda236c53e9e3c413eec26"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00001-of-00050.parquet",
+   "source_row_index": 113564,
+   "source_id": "opencodeinstruct:113564",
+   "conversation_sha256": "7986e46b5be3090ee7ad147dabed99de1111b956c2e9183f6f9c62f9f9fdb7e6"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00001-of-00050.parquet",
+   "source_row_index": 140652,
+   "source_id": "opencodeinstruct:140652",
+   "conversation_sha256": "7a0e3620ff5b1c311ede4b854b84f5c1d22996d99796103289c94b524ec42987"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00002-of-00050.parquet",
+   "source_row_index": 212301,
+   "source_id": "opencodeinstruct:212301",
+   "conversation_sha256": "9a0ddbc75b0be367835a0de170ee2868a84a448d49c5c93c281c712a04a7c4f6"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00002-of-00050.parquet",
+   "source_row_index": 214563,
+   "source_id": "opencodeinstruct:214563",
+   "conversation_sha256": "e53625338959a1aff9495983e9319a54ba7af5c8721bd5e7f92004597b8ccc40"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00003-of-00050.parquet",
+   "source_row_index": 339477,
+   "source_id": "opencodeinstruct:339477",
+   "conversation_sha256": "dc8a5e19dcd797eb2fd276b0b6698954e1d0b181ac3d0de07dba055364f9f093"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00003-of-00050.parquet",
+   "source_row_index": 375012,
+   "source_id": "opencodeinstruct:375012",
+   "conversation_sha256": "bd974719d46da8e92011dd8e7465761f3df04d89c1384c2b4d0d5b62e53337e1"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00004-of-00050.parquet",
+   "source_row_index": 400000,
+   "source_id": "opencodeinstruct:400000",
+   "conversation_sha256": "2867358c4ef8143b9dbe1a509481e369a0cbbb166bcb29a6d051653706f2189b"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00005-of-00050.parquet",
+   "source_row_index": 503115,
+   "source_id": "opencodeinstruct:503115",
+   "conversation_sha256": "139fd049ea833b4577566cfbdeb3d9c43a2e6fc90ac0d5b5932360c7bb0f11a4"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00005-of-00050.parquet",
+   "source_row_index": 532395,
+   "source_id": "opencodeinstruct:532395",
+   "conversation_sha256": "ad2d701a91b2776097307b6ae08c50efee644ff5da8eef33463f387133cf74c2"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00006-of-00050.parquet",
+   "source_row_index": 654600,
+   "source_id": "opencodeinstruct:654600",
+   "conversation_sha256": "aff152f63507d999ad2e7c3fa1c4c983c41aec8e334d94e5c588829dc2591fb7"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00007-of-00050.parquet",
+   "source_row_index": 784689,
+   "source_id": "opencodeinstruct:784689",
+   "conversation_sha256": "30cdec0af8ea2f742d24194c20be15c2d599656c102cfdcb16d81295ce5f023d"
+  },
+  {
+   "source_file": "opencodeinstruct/data/train-00008-of-00050.parquet",
+   "source_row_index": 882723,
+   "source_id": "opencodeinstruct:882723",
+   "conversation_sha256": "05f5c180f69603c1a060463a2159fb068b266da4d6b9f9beb8dd694b894dba59"
+  }
+ ]
+}

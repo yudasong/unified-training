@@ -1,0 +1,50 @@
+{
+ "description": "Identity of the paper's artifacts. A rebuild must reproduce tokens.bin, weights.bin and index.npy byte for byte; files that record coding-pool episode ids (provenance.parquet, coding_provenance.parquet, selected_coding_pool_episode_ids.npy) differ because the original pool also held three other sources ahead of OpenCodeInstruct (pool id = OCI-only id + 26131).",
+ "source_anchor": {
+  "name": "midtrain-olmo3-fresh-docaware-240m-midtrainmix-broad16-clean",
+  "manifest_sha256": "12d89d86cc4689c868ce9bb7d452aa5d73caab8fc411b2e4ea8b15b4d7c4d199",
+  "index.npy": "1ff923131ed36821e7d5bfe5f04b74e4e42880ccddc08859fa851835ef59747a",
+  "tokens.bin": "fc213d77fe6acaf7ed3fad0a7e50d0feffbb3fedc6c05ea908772f53d9d48e93",
+  "weights.bin": "22845c5a01c61922cd42abf2cf4dfe5f0c63770453f0f2a6bba390a005b1f621",
+  "n_episodes": 733393
+ },
+ "tokenizer_sha256": "66e4a08a9d370a69df88e0f0358787aa102db5687a2f0acbca783d90b0c40d3c",
+ "broad16_bundle_sha256": "33b90a26724bd9528ee478961cc00cbf306d11b413e57c987226f373ef2c78f4",
+ "code_removed": {
+  "name": "midtrain-olmo3-fresh-no-explicit-code-delete-180m-v1",
+  "n_episodes": 647327,
+  "n_tokens": 181038933,
+  "n_supervised_tokens": 180391606,
+  "index.npy": "abb3776408bda6392082530beebf8a79ad7245ba1b823171851f96e745aaf4b1",
+  "tokens.bin": "b23ffcd1476c6d2cd8ec37f4706eca7791f2a15dd84c5aeb489f8c5930e34320",
+  "weights.bin": "d3bd5e480bb32c9424711d590ee81318b678fe1308443cebb3538de0202f8b3a"
+ },
+ "coding_pool": {
+  "opencodeinstruct_source_rows": 1000000,
+  "verified_candidates": 420798,
+  "retained": 388959,
+  "decontamination_dropped": 19,
+  "eligible": 388940,
+  "supervised_tokens_eligible": 125312191,
+  "local_tests": {
+   "pass": 369910,
+   "test_or_runtime_failure": 11521,
+   "timeout": 180,
+   "unsupported_test_shape": 7329,
+   "passed_supervised_tokens": 115274241
+  }
+ },
+ "code_replaced": {
+  "name": "midtrain-olmo3-fresh-code-replacement-oci-tested-240m-v2",
+  "n_episodes": 838213,
+  "n_tokens": 301264365,
+  "n_supervised_tokens": 239843915,
+  "target_supervised_tokens": 59451795,
+  "coding_supervised_tokens": 59452309,
+  "unique_coding_episodes": 190886,
+  "preserved_backbone_episodes": 647327,
+  "index.npy": "e0e4007e1b3f66fae2435e0851fcc042f7c1905135aad325e78788d64e1e8e4d",
+  "tokens.bin": "76a03603e6d78a2a0d962dd01579ecc17d6eac7824100fd85ec2b06ea3d268c1",
+  "weights.bin": "d63a6b4d17a43f96c0b043bdc6083c336349779640d19bca47aa0461fc1d2b72"
+ }
+}

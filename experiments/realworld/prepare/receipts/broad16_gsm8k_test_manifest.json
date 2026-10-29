@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "output": "<local path>",
+  "output_sha256": "33b90a26724bd9528ee478961cc00cbf306d11b413e57c987226f373ef2c78f4",
+  "counts": {
+    "arc_challenge-test": 1172,
+    "gsm8k-test": 1319,
+    "sciq-test": 1000,
+    "math500-test": 500,
+    "ifeval": 541,
+    "humaneval-plus": 164,
+    "mbpp-plus": 378
+  },
+  "total": 5074,
+  "sources": [
+    {
+      "benchmark": "arc_challenge-test",
+      "path": "<local path>",
+      "sha256": "1b1f5bba14a809a6ce1a44804601bd2747586afa1bf96abf3322c4ed17b4b9bf",
+      "rows": 1172,
+      "question_field": "question"
+    },
+    {
+      "benchmark": "gsm8k-test",
+      "path": "<local path>",
+      "sha256": "45965b000311d1550e5619b60b5bf31cf76edebfd8b8eddc62a876fbf8c9be95",
+      "rows": 1319,
+      "question_field": "question"
+    },
+    {
+      "benchmark": "sciq-test",
+      "path": "<local path>",
+      "sha256": "955f96a8a6e7853a6c0e36cd3ef44547067490c5000c80bd1b827b4debfa1c32",
+      "rows": 1000,
+      "question_field": "question"
+    },
+    {
+      "benchmark": "math500-test",
+      "path": "<local path>",
+      "sha256": "ff2663846092b986df3026f53904030cbaf8e061c9f978d319a7bd86b3a04ea4",
+      "rows": 500,
+      "question_field": "problem"
+    },
+    {
+      "benchmark": "ifeval",
+      "path": "<local path>",
+      "sha256": "e97942d61addb329bc02aabf0e8b55c89d2ce9835ff148b3f96ece6f9fc2de82",
+      "rows": 541,
+      "question_field": "prompt"
+    },
+    {
+      "benchmark": "humaneval-plus",
+      "path": "<local path>",
+      "sha256": "42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f",
+      "rows": 164,
+      "question_field": "prompt"
+    },
+    {
+      "benchmark": "mbpp-plus",
+      "path": "<local path>",
+      "sha256": "b54e762755248ca411b523c917fa9f93c07b5ff2966bf60b3917b853926a3dad",
+      "rows": 378,
+      "question_field": "prompt"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Coding RL on the KodCode set: the Math12K recipe with the sandboxed unit-test reward; prompts already
+# carry the instruction. Validation = the 512 held-out prompts.
+defaults: maxrl_math12k.yaml
+
+env:
+  math:
+    math_verify_impl: code_tests

@@ -1,0 +1,185 @@
+{
+ "schema_version": 1,
+ "description": "nl_tower data of the paper: every seed, size and exclusion. Paths are relative to NL_TOWER_WORKDIR. Read by nl_tower/prepare_data.py; the md5s of the outputs are in artifacts.json. Item i of a generator stream is a pure function of (rung, seed, i); a set is the first N unique questions of its stream after skipping excluded qids.",
+ "data": {
+  "question_sets": [
+   {
+    "spec": "nltw_e",
+    "dir": "data/nltw_e/corpus_tw1",
+    "seed": 20260921,
+    "n_test": 1024,
+    "n_pool": 5000,
+    "exclude": []
+   },
+   {
+    "spec": "nltw_m0",
+    "dir": "data/nltw_m0/corpus_tw1",
+    "seed": 20260921,
+    "n_test": 1024,
+    "n_pool": 5000,
+    "exclude": []
+   },
+   {
+    "spec": "nltw_m",
+    "dir": "data/nltw_m/corpus_tw1",
+    "seed": 20260921,
+    "n_test": 1024,
+    "n_pool": 6000,
+    "exclude": []
+   },
+   {
+    "spec": "nltw_h",
+    "dir": "data/nltw_h/corpus_tw1",
+    "seed": 20260921,
+    "n_test": 1024,
+    "n_pool": 6000,
+    "exclude": []
+   },
+   {
+    "spec": "nltw_h9",
+    "dir": "data/nltw_h9/corpus_tw1",
+    "seed": 1008,
+    "n_test": 0,
+    "n_pool": 10000,
+    "exclude": [
+     "data/nltw_h/corpus_tw1/test.jsonl",
+     "data/nltw_m/corpus_tw1/test.jsonl",
+     "data/nltw_m0/corpus_tw1/test.jsonl",
+     "data/nltw_e/corpus_tw1/test.jsonl",
+     "data/nltw_h/corpus_tw1/pool.jsonl"
+    ]
+   },
+   {
+    "spec": "nltw_hb",
+    "dir": "data/nltw_hb/corpus_tw1",
+    "seed": 1012,
+    "n_test": 1024,
+    "n_pool": 10000,
+    "exclude": [
+     "data/nltw_h/corpus_tw1/test.jsonl",
+     "data/nltw_m/corpus_tw1/test.jsonl",
+     "data/nltw_m0/corpus_tw1/test.jsonl",
+     "data/nltw_e/corpus_tw1/test.jsonl",
+     "data/nltw_h/corpus_tw1/pool.jsonl",
+     "data/nltw_h9/corpus_tw1/pool.jsonl"
+    ]
+   },
+   {
+    "spec": "nltw_hb12",
+    "dir": "data/nltw_hb12/corpus_tw1",
+    "seed": 1013,
+    "n_test": 1024,
+    "n_pool": 0,
+    "exclude": [
+     "data/nltw_h/corpus_tw1/test.jsonl",
+     "data/nltw_m/corpus_tw1/test.jsonl",
+     "data/nltw_m0/corpus_tw1/test.jsonl",
+     "data/nltw_e/corpus_tw1/test.jsonl",
+     "data/nltw_hb/corpus_tw1/test.jsonl",
+     "data/nltw_h/corpus_tw1/pool.jsonl",
+     "data/nltw_h9/corpus_tw1/pool.jsonl",
+     "data/nltw_hb/corpus_tw1/pool.jsonl"
+    ]
+   }
+  ],
+  "rl_pools": [
+   {
+    "spec": "nltw_m0",
+    "file": "results/rl_prompts/nltw_m0.jsonl",
+    "seed": 777,
+    "n": 10000
+   },
+   {
+    "spec": "nltw_m",
+    "file": "results/rl_prompts/nltw_m.jsonl",
+    "seed": 777,
+    "n": 20000
+   },
+   {
+    "spec": "nltw_h",
+    "file": "results/rl_prompts/nltw_h.jsonl",
+    "seed": 777,
+    "n": 10000
+   }
+  ],
+  "mixes": {
+   "base": {
+    "description": "Base: demonstrated-pattern (nltw_m0) + omitted-composition (nltw_m) prompts",
+    "m0": 10000,
+    "m": 18570,
+    "select_seed": 0,
+    "shuffle_seed": 1,
+    "test": "data/nltw_m/corpus_tw1/test.jsonl",
+    "train_json": "unified_data/nltw_m_train.json",
+    "test_json": "unified_data/nltw_m_test.json"
+   },
+   "order": {
+    "description": "intermediate mix that fixes the order of the Extended rows",
+    "m0": 10000,
+    "m": 11666,
+    "h": 10000,
+    "select_random_state": 1,
+    "shuffle_random_state": 2,
+    "test": "data/nltw_h/corpus_tw1/test.jsonl"
+   },
+   "extended": {
+    "description": "Extended: 21,666 rows of the intermediate mix (8-9 people) + the 10-11-person nltw_hb pool",
+    "third_spec": "nltw_hb",
+    "third_pool": "data/nltw_hb/corpus_tw1/pool.jsonl",
+    "shuffle_seed": 1012,
+    "test": "data/nltw_hb/corpus_tw1/test.jsonl",
+    "train_json": "unified_data/nltw_hbmix_train.json",
+    "test_json": "unified_data/nltw_hbmix_test.json"
+   },
+   "contamination_tests": [
+    "data/nltw_h/corpus_tw1/test.jsonl",
+    "data/nltw_m/corpus_tw1/test.jsonl",
+    "data/nltw_m0/corpus_tw1/test.jsonl",
+    "data/nltw_e/corpus_tw1/test.jsonl"
+   ]
+  },
+  "corpus": {
+   "description": "the 510M-token midtraining corpus tw1X: 100,000 easy (6-7 people) + 100,000 nltw_m0 (8-9 people) questions, K = 4 solver traces each",
+   "tag": "tw1X",
+   "rungs": [
+    "nltw_e",
+    "nltw_m0"
+   ],
+   "exclusion_list": "data/nltw_m/corpus_tw1L/exclude.jsonl",
+   "audit_exclusion_list": "data/nltw_m/corpus_tw1X/exclude.jsonl",
+   "question_pools": [
+    {
+     "spec": "nltw_e",
+     "part": "tw1L",
+     "seed": 31000000,
+     "n": 40000
+    },
+    {
+     "spec": "nltw_m0",
+     "part": "tw1L",
+     "seed": 32000000,
+     "n": 40000
+    },
+    {
+     "spec": "nltw_e",
+     "part": "tw1Xnew",
+     "seed": 33000000,
+     "n": 60000
+    },
+    {
+     "spec": "nltw_m0",
+     "part": "tw1Xnew",
+     "seed": 34000000,
+     "n": 60000
+    }
+   ],
+   "traces": {
+    "k": 4,
+    "seed": 7
+   },
+   "mix_seed": 20260921,
+   "corpus": "data/nltw_m/corpus_tw1X/cot.jsonl",
+   "audit": "data/nltw_m/corpus_tw1X/contamination_audit.json"
+  }
+ }
+}
