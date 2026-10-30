@@ -68,10 +68,14 @@ tests/                  CPU tests (pytest tests)
 ## Citation
 
 ```bibtex
-@article{unifiedtraining2026,
-  title  = {Training Foundation Models with a Single Algorithm},
-  note   = {Citation to be added},
-  year   = {2026}
+@misc{song2026trainingfoundationmodelssingle,
+      title={Training Foundation Models with a Single Algorithm},
+      author={Yuda Song and Alvin Zhang and Fahim Tajwar and Daman Arora and Jeff Schneider and Daniel Khashabi and Ruslan Salakhutdinov and J. Andrew Bagnell and Aarti Singh and Andrea Zanette},
+      year={2026},
+      eprint={2610.40564},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2610.40564},
 }
 ```
 
