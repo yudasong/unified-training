@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import os
+import subprocess
 import sys
 
 import pytest
@@ -113,6 +114,19 @@ def test_fast_runner_agrees_with_pytest_on_plain_asserts():
     for solution, expected in ((good, True), (bad, False)):
         assert code_reward.run_pytest(solution, TEST, fast=True)[0] is expected
         assert code_reward.run_pytest(solution, TEST, fast=False)[0] is expected
+
+
+def test_fast_runner_uses_the_sandbox_hash_seed_like_pytest():
+    # A test that depends on set iteration order must get the same, PYTHONHASHSEED=0, result on both paths.
+    words = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "kiwi"]
+    seeded = subprocess.run(
+        [sys.executable, "-c", f"print(','.join(set({words!r})))"],
+        env={"PYTHONHASHSEED": "0"}, capture_output=True, text=True, check=True,
+    ).stdout.strip().split(",")
+    solution = f"def unique_words():\n    return list(set({words!r}))\n"
+    test = f"from solution import unique_words\n\ndef test_order():\n    assert unique_words() == {seeded!r}\n"
+    assert code_reward.run_pytest(solution, test, fast=False)[0]
+    assert all(code_reward.run_pytest(solution, test, fast=True)[0] for _ in range(5))
 
 
 def test_fast_runner_reports_syntax_error_and_no_tests_as_failures():

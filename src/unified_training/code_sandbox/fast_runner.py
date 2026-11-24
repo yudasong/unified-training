@@ -1,7 +1,7 @@
 """Run a plain assert-style test module against ``solution.py`` without pytest.
 
 Copied into the sandbox directory as ``_runner.py`` and started with
-``python -I -S`` (no site, no user paths).  Reads and removes the run nonce,
+``python -s -S`` (no site, no user paths).  Reads and removes the run nonce,
 installs the audit-hook guard, collects module-level ``test_*`` functions and
 ``Test*`` classes, expands ``mark.parametrize`` from the shim, runs every case
 and prints the nonce pass line only when at least one test ran and none raised.
