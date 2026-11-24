@@ -14,7 +14,7 @@ Most KodCode test modules are plain ``assert`` functions and importing pytest
 costs more than running them, so those run under a small in-tree runner
 (code_sandbox/fast_runner.py with the code_sandbox/pytest_shim.py ``pytest``
 providing ``raises``, ``approx`` and ``mark.parametrize``) started with
-``python -I -S``; modules that use fixtures, capture, other marks, skips or
+``python -s -S``; modules that use fixtures, capture, other marks, skips or
 unittest fall back to real pytest.  ``UNIFIED_CODE_TEST_FAST=0`` forces pytest.
 
 Both paths install code_sandbox/guard.py (an audit hook that blocks deletion and
@@ -133,9 +133,12 @@ def _fast_enabled() -> bool:
     return os.environ.get("UNIFIED_CODE_TEST_FAST", "1") != "0"
 
 
-def _run_sandboxed(cmd: list[str], workdir: str, timeout: float, nonce: str) -> tuple[bool, str]:
+def _run_sandboxed(cmd: list[str], workdir: str, timeout: float, nonce: str,
+                   *, pythonpath: bool = True) -> tuple[bool, str]:
     """Run ``cmd`` in ``workdir``; pass only on exit 0 plus the nonce pass line."""
     env = _sandbox_env()
+    if not pythonpath:
+        env.pop("PYTHONPATH", None)
     env["HOME"] = workdir
     env["TMPDIR"] = workdir
     try:
@@ -194,14 +197,16 @@ def run_pytest(solution: str, test: str, *, timeout: float | None = None,
         if use_fast:
             shutil.copyfile(os.path.join(_SANDBOX_ASSETS, "pytest_shim.py"), os.path.join(workdir, "pytest.py"))
             shutil.copyfile(os.path.join(_SANDBOX_ASSETS, "fast_runner.py"), os.path.join(workdir, "_runner.py"))
-            cmd = [_sandbox_python(), "-I", "-S", "_runner.py"]
+            # -s -S rather than -I: -I also implies -E, which would drop the sandbox
+            # env's PYTHONHASHSEED=0 and make set/dict-order results vary per run.
+            cmd = [_sandbox_python(), "-s", "-S", "_runner.py"]
         else:
             shutil.copyfile(os.path.join(_SANDBOX_ASSETS, "conftest_guard.py"), os.path.join(workdir, "conftest.py"))
             cmd = [
                 _sandbox_python(), "-m", "pytest", "-q", "-x", "--no-header", "-s",
                 "-p", "no:cacheprovider", "--rootdir", workdir, "test_solution.py",
             ]
-        return _run_sandboxed(cmd, workdir, timeout, nonce)
+        return _run_sandboxed(cmd, workdir, timeout, nonce, pythonpath=not use_fast)
     finally:
         shutil.rmtree(workdir, ignore_errors=True)
 
